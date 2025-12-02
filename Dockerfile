@@ -1,4 +1,4 @@
-FROM serversideup/php:8.2-fpm-apache
+FROM serversideup/php:8.3-fpm-apache
 
 LABEL org.opencontainers.image.source="https://github.com/vanWittlaer/mediawiki-base"
 LABEL org.opencontainers.image.description="Base MediaWiki image with PHP extensions and dependencies"
