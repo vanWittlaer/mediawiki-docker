@@ -18,7 +18,9 @@ RUN install-php-extensions apcu \
 
 # Install system dependencies
 RUN docker-php-serversideup-dep-install-debian ffmpeg \
+    && docker-php-serversideup-dep-install-debian ghostscript \
     && docker-php-serversideup-dep-install-debian imagemagick \
-    && docker-php-serversideup-dep-install-debian nano
+    && docker-php-serversideup-dep-install-debian nano \
+    && docker-php-serversideup-dep-install-debian poppler-utils
 
 USER www-data
