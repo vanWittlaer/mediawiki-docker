@@ -21,6 +21,7 @@ RUN docker-php-serversideup-dep-install-debian ffmpeg \
     && docker-php-serversideup-dep-install-debian ghostscript \
     && docker-php-serversideup-dep-install-debian imagemagick \
     && docker-php-serversideup-dep-install-debian nano \
-    && docker-php-serversideup-dep-install-debian poppler-utils
+    && docker-php-serversideup-dep-install-debian poppler-utils \
+    && docker-php-serversideup-dep-install-debian rclone
 
 USER www-data
