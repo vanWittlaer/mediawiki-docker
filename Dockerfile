@@ -16,6 +16,13 @@ RUN install-php-extensions apcu \
     sockets \
     wikidiff2
 
+# Enable OPcache (serversideup controls it via env vars)
+ENV PHP_OPCACHE_ENABLE=1 \
+    PHP_OPCACHE_MEMORY_CONSUMPTION=256 \
+    PHP_OPCACHE_MAX_ACCELERATED_FILES=20000 \
+    PHP_OPCACHE_INTERNED_STRINGS_BUFFER=16 \
+    PHP_OPCACHE_VALIDATE_TIMESTAMPS=0
+
 # Install system dependencies
 RUN docker-php-serversideup-dep-install-debian ffmpeg \
     && docker-php-serversideup-dep-install-debian ghostscript \
